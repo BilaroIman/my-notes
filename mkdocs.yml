@@ -1,0 +1,24 @@
+site_name: My Notes
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - CICD:
+      - Overview: CICD/index.md
+      - GitHub Actions: CICD/GitHubActions.md
+      - Jenkins: CICD/Jenkins.md
+  - Kubernetes:
+      - Overview: Kubernetes/index.md
+      - Helm: Kubernetes/Helm.md
+      - Operators: Kubernetes/Operators.md
+  - Terraform:
+      - Overview: Terraform/index.md
+      - Modules: Terraform/Modules.md
+      - State Management: Terraform/StateManagement.md
