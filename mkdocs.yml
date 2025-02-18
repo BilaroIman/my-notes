@@ -22,3 +22,14 @@ nav:
       - Overview: Terraform/index.md
       - Modules: Terraform/Modules.md
       - State Management: Terraform/StateManagement.md
+
+# Enable GitHub Pages Deployment
+site_url: "https://BilaroIman.github.io/my-notes/"
+
+# GitHub Repository Link
+repo_url: "https://github.com/BilaroIman/my-notes"
+repo_name: "BilaroIman/my-notes"
+
+# Exclude the 'site' directory from version control
+exclude_dirs:
+  - site
