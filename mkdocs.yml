@@ -1,12 +1,24 @@
 site_name: My Notes
 theme:
   name: material
+  palette:
+    scheme: slate   # Dark mode (Gamitin 'default' para sa light mode)
+    primary: blue   # Main color
+    accent: amber   # Highlight color
+  font:
+    text: Montserrat
+    code: Fira Code
+  logo: assets/images/my-logo.png
+  favicon: assets/images/my-favicon.ico
   features:
     - navigation.tabs
     - navigation.instant
     - toc.integrate
     - search.suggest
     - search.highlight
+    - navigation.expand  # Automatic expand ng sections
+    - content.tooltips   # Tooltip hover effects
+    - content.code.annotate  # Code annotations
 
 nav:
   - Home: index.md
@@ -33,3 +45,10 @@ repo_name: "BilaroIman/my-notes"
 # Exclude the 'site' directory from version control
 exclude_dirs:
   - site
+
+# Custom Styles & Scripts
+extra_css:
+  - assets/stylesheets/custom.css
+
+extra_javascript:
+  - assets/scripts/custom.js
