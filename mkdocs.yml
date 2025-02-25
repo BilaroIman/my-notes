@@ -21,9 +21,8 @@ theme:
     - content.code.annotate  # Code annotations
 
 nav:
-  - Home: index.md
   - CICD:
-      - Overview: CICD/index.md
+      - Gitops: CICD/index.md
       - GitHub Actions: CICD/GitHubActions.md
       - Jenkins: CICD/Jenkins.md
   - Kubernetes:
