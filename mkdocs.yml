@@ -1,10 +1,13 @@
 site_name: My Notes
+site_url: "https://BilaroIman.github.io/my-notes/"
+
+# Theme Configuration
 theme:
   name: material
   palette:
-    scheme: slate   # Dark mode (Gamitin 'default' para sa light mode)
-    primary: blue   # Main color
-    accent: amber   # Highlight color
+    - scheme: slate  # Dark mode (Use 'default' for light mode)
+      primary: blue
+      accent: amber
   font:
     text: Montserrat
     code: Fira Code
@@ -13,41 +16,49 @@ theme:
   features:
     - navigation.tabs
     - navigation.instant
-    - toc.integrate
+    - navigation.expand   # Auto-expand sections
+    - navigation.sections
     - search.suggest
     - search.highlight
-    - navigation.expand  # Automatic expand ng sections
+    - toc.integrate
     - content.tooltips   # Tooltip hover effects
     - content.code.annotate  # Code annotations
+    - content.code.copy  # Copy button for code blocks
 
+# Navigation Structure
 nav:
-  - CICD:
-      - Gitops: CICD/index.md
+  - CI/CD:
+      - GitOps: CICD/index.md
       - GitHub Actions: CICD/GitHubActions.md
       - Jenkins: CICD/Jenkins.md
   - Kubernetes:
-      - Overview: Kubernetes/index.md
+      - GitOps: Kubernetes/index.md
       - Helm: Kubernetes/Helm.md
       - Operators: Kubernetes/Operators.md
   - Terraform:
-      - Overview: Terraform/index.md
+      - GitOps: Terraform/index.md
       - Modules: Terraform/Modules.md
       - State Management: Terraform/StateManagement.md
+  - About: about.md
 
-# Enable GitHub Pages Deployment
-site_url: "https://BilaroIman.github.io/my-notes/"
-
-# GitHub Repository Link
+# Repository Information
 repo_url: "https://github.com/BilaroIman/my-notes"
 repo_name: "BilaroIman/my-notes"
+edit_uri: "blob/main/docs/"
 
-# Exclude the 'site' directory from version control
+# Exclude directories from version control
 exclude_dirs:
   - site
 
 # Custom Styles & Scripts
 extra_css:
   - assets/stylesheets/custom.css
-
 extra_javascript:
   - assets/scripts/custom.js
+
+# Plugins (Optional Enhancements)
+plugins:
+  - search
+  - mkdocs-material-extensions  # Additional features for Material theme
+  - macros  # Allows adding dynamic macros
+  - git-revision-date-localized  # Shows last update date on pages
